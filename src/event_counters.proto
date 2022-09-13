@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package deepmind.s6;
+
+
+// A single name/count pair.
+message EventCounterProto {
+  // The name of the counter.
+  string name = 1;
+
+  // The value of the counter.
+  int64 value = 2;
+}
+
+// A collection of EventCounters.
+message EventCountersProto {
+  repeated EventCounterProto counters = 1;
+}
